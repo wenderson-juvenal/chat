@@ -2,12 +2,11 @@ const socket = io()
 let messages_div = document.querySelector("#messages") 
 
 socket.on("all_messages", (data) => {
-    let messages = "<ul>"
-    data.forEach(message => {
-        messages += `<li>${message}</li>`
-    })
-    messages += "</ul>"
+    let messages = ""
 
+    data.forEach(message => {
+        messages += `<div class="message">${message}</div>`
+    })
     messages_div.innerHTML = messages
 })
 
