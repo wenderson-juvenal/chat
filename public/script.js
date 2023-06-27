@@ -15,6 +15,8 @@ socket.on("all_messages", (data) => {
 })
 
 const form_set_username = document.querySelector("#username")
+const form_new_message = document.querySelector("#new_message")
+
 let username
 
 form_set_username.addEventListener("submit", (e) => {
@@ -22,11 +24,10 @@ form_set_username.addEventListener("submit", (e) => {
 
     username = form_set_username.querySelector("input[type=text]").value
     form_set_username.style.display = "none"
-    
+    form_new_message.style.display = "block"
+    form_new_message.querySelector("label").innerHTML = `<label>${username}:<input type="text"></label>`
 })
 
-
-const form_new_message = document.querySelector("#new_message")
 
 form_new_message.addEventListener("submit", (e) => {
     e.preventDefault()

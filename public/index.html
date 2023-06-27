@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="username">
-        <input type="text">
-        <input type="submit" value="enviar">
-    </form>
+    <header>
+        <h1>Wenderson chat</h1>
+        <form id="username">
+            <label>
+                nome: <input type="text">
+            </label>
+            <input type="submit" value="enviar">
+        </form>
+        <form id="new_message">
+            <label></label>
+            <input type="submit" value="enviar">
+        </form>
+    </header>
 
-    <div id="messages"></div>
-    <form id="new_message">
-        <input type="text">
-        <input type="submit" value="enviar">
-    </form>
+    <main>
+        <div id="messages"></div>
+    </main>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
