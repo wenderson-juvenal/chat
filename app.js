@@ -15,7 +15,7 @@ app.use(session({
     saveUninitialized: true
 }))
 app.get("/", (req, res) => {
-    res.render("index")
+    res.render("home")
 })
 app.post("/login", (req, res) => {
     req.session.name = req.body.name
@@ -38,10 +38,8 @@ const messages = []
 
 io.on("connection", (socket) => {
     socket.emit("all_messages", messages)
-    console.log("ok")
     socket.on("new_message", (data) => {
         const time = new Date().toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo' });
-        console.log(data)
         messages.push({username:data.username, message:data.new_message, time})
         io.emit("all_messages", messages)
     })
