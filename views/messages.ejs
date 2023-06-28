@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     <header>
         <h1>Wenderson chat</h1>
-        <form id="username">
-            <label>
-                nome: <input type="text">
-            </label>
-            <input type="submit" value="enviar">
-        </form>
         <form id="new_message">
-            <label></label>
+            <label>
+                <%= name %>: <input type="text">
+            </label>
+            <input type="hidden" value="<%= name %>">
             <input type="submit" value="enviar">
         </form>
     </header>
@@ -26,6 +23,6 @@
     </main>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
