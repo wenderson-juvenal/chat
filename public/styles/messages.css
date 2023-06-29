@@ -6,9 +6,41 @@
 
 body {
     background-color: #293838;
-    padding: 0 200px;
+    padding: 0 10vw;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+main {
+    background-color: antiquewhite;
+    padding: 10px;
 }
 #messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     height: 80vh;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+.message {
     width: 100%;
+}
+.message span {
+    font-size: .8em;
+}
+#new_message input[type=text]{
+    width: calc((100% - 64px));
+    padding: 8px 5px;
+}
+
+#new_message input[type=submit] {
+    padding: 9px 0;
+    width: 60px;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }

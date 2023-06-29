@@ -9,17 +9,15 @@
 <body>
     <header>
         <h1>Wenderson chat</h1>
-        <form id="new_message">
-            <label>
-                <%= name %>: <input type="text">
-            </label>
-            <input type="hidden" value="<%= name %>">
-            <input type="submit" value="enviar">
-        </form>
     </header>
 
     <main>
         <div id="messages"></div>
+        <form id="new_message">
+            <input type="text" placeholder="<%= name %>" autocomplete="off">
+            <input type="hidden" value="<%= name %>">
+            <input type="submit" value="enviar">
+        </form>
     </main>
 
     <script src="/socket.io/socket.io.js"></script>

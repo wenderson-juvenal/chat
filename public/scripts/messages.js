@@ -8,7 +8,7 @@ socket.on("all_messages", (data) => {
     
     data.forEach(message => {
         messages += `<div class="message">
-                <p>${message["time"]} - ${message["username"]} - ${message["message"]}</p>
+                <p><span>(${message["time"]})</span> ${message["username"]} - ${message["message"]}</p>
             </div>`
     })
     messages_div.innerHTML = messages
