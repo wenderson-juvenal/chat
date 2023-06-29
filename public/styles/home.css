@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: rgb(70, 70, 70);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    padding: 50px 30px;
+    width: 250px;
+    background-color: rgb(38, 133, 136);
+
+}
+input {
+    width: 100%;
+    padding: 5px 10px;
+    color: black;
+    margin-bottom: 5px;
+    border: 1px solid black;
+}
+input[type=submit] {
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
